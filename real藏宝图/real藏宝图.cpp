@@ -23,5 +23,5 @@ int main()
     c->handleSafeClosed();
     c->printState();
   
-    c->destroyController();
+    c->destroyController();//
 }
