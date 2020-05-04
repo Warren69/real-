@@ -1,21 +1,27 @@
-#pragma once
+#ifndef OPEN_H
+#define OPEN_H
 #include"State.h"
 #include<iostream>
 class Open:public State {
 public:
-	Open();
-	static Open* Instance();
-	void handleKeyTurned() {
-		if (candle in)
-		{
-			open safe;
-			changeStateTo()
-		}
-		else {
-			release killer rabbit;
-			changeStateTo();
-		}
+	virtual void printState() {
+		std::cout << "Open State" << std::endl;
 	}
+	//Open();
+	static Open* Instanceo() {
+		if (_instanceo == 0)
+		{
+			_instanceo = new Open;
+		}
+		return _instanceo;
+	};
+	virtual void handleSafeClosed(Controller* c);
+
+	static void destroy();
 private:
-	static Open* _instance;
+	static Open* _instanceo;
 };
+
+
+#endif // !OPEN_H
+

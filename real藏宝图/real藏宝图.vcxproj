@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="Lock.cpp" />
     <ClCompile Include="Open.cpp" />
     <ClCompile Include="real藏宝图.cpp" />
     <ClCompile Include="State.cpp" />

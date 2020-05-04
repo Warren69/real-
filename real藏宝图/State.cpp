@@ -1,14 +1,14 @@
-#include "State.h"
-
-void State::handleCandleRemoved()
+#include"State.h"
+#include"Controller.h"
+void State::handleCandleRemoved(Controller* c)
 {
 }
 
-void State::handleKeyTurned()
+void State::handleKeyTurned(Controller* c)
 {
 }
 
-void State::handleSafeClosed()
+void State::handleSafeClosed(Controller* c)
 {
 }
 

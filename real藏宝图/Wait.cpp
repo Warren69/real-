@@ -1,13 +1,26 @@
-#include "Wait.h"
+#include"Wait.h"
+#include"Controller.h"
+#include"Lock.h"
+Wait* Wait::_instancew = 0;
 
-Wait* Wait::Instance()
+void Wait::handleCandleRemoved(Controller* c)
 {
-	if (_instance == 0)
-		_instance = new Wait;
-	return _instance;
+	std::cout << "蜡烛移开" << std::endl;
+	if ( c->getDoorState())//门是关的
+	{
+		revealLock();
+		c->changeStateTo(Lock::Instancel());
+		return;
+	}
+	else {
+		//std::cout<<""
+	}
+	
+	
 }
 
-Wait::Wait()
+ void Wait::destroyWait()
 {
-	_instance = 0;
+	delete _instancew;
+	_instancew = nullptr;
 }

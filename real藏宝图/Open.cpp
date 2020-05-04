@@ -1,14 +1,15 @@
 #include "Open.h"
-
-Open::Open()
+#include"Controller.h"
+#include"Wait.h"
+Open* Open::_instanceo = 0;
+void Open::handleSafeClosed(Controller* c)
 {
-    _instance = 0;
+	std::cout << "safe closed\n";
+	c->changeStateTo(Wait::Instancew());
 }
 
-Open* Open::Instance()
+void Open::destroy()
 {
-    if (_instance == 0)
-    {
-        _instance = new Open;
-    }
+	delete _instanceo;
+	_instanceo = nullptr;
 }

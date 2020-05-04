@@ -1,23 +1,38 @@
-#pragma once
+#ifndef WAIT_H
+#define WAIT_H
 #include "State.h"
 #include<iostream>
-class Wait:public State{
+class Wait:public State
+{
 public:
-	static Wait* Instance();
-	void revealLock() {
-		std::cout << "reveals lock/n";
+	virtual void printState() {
+		std::cout << "Wait State" <<std:: endl;
 	}
-	void handleCandleRemoved(int doorState) {
-		if (!doorState) {
-			revealLock();
-			changeStateTo(Lock) {
-
-			}
-		}
+	static Wait* Instancew() {
+		if (_instancew == 0)
+			_instancew = new Wait;
+		
+		std::cout << "Waitµ¥Àý" << std::endl;
+		return _instancew;
+	};
+	void revealLock()
+	{
+		std::cout << "reveals lock\n";
+	}
+	virtual void handleCandleRemoved(Controller* c);
+	static void destroyWait();
+	
 protected:
-	Wait();
+	Wait() {
+		std::cout << "Wait¹¹Ôì" << std::endl;
+	};
 private:
-	static Wait* _instance;
+	static Wait* _instancew;
+
 };
+
+
+#endif // !WAIT_H
+
 
 

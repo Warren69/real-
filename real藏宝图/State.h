@@ -1,11 +1,18 @@
-#pragma once
-#include "Controller.h"
-
+#ifndef STATE_H
+#define STATE_H
+class Controller;
 class State {
 public:
-	virtual void handleCandleRemoved() ;
-	virtual void handleKeyTurned() ;
-	virtual void handleSafeClosed() ;
+	virtual void printState()=0;
+	virtual void handleCandleRemoved(Controller* c);
+	virtual void handleKeyTurned(Controller* c);
+	virtual void handleSafeClosed(Controller* c);
 protected:
-	void changeStateTo(Controller *, State *);
+	void changeStateTo(Controller*, State*);
 };
+
+#endif // !STATE_H
+
+
+
+

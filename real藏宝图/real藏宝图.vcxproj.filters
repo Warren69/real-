@@ -18,16 +18,19 @@
     <ClCompile Include="real藏宝图.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.cpp">
+    <ClCompile Include="State.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Wait.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Open.cpp">
+    <ClCompile Include="Lock.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="State.cpp">
+    <ClCompile Include="Controller.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Open.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
