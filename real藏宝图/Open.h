@@ -5,8 +5,9 @@
 class Open:public State {
 public:
 	virtual void printState() {
-		std::cout << "Open State" << std::endl;
+		std::cout << "ÏÖÔÚ×´Ì¬Îª£ºOpen State" << std::endl;
 	}
+	bool  handleKeyTurned(Controller* c) ;
 	//Open();
 	static Open* Instanceo() {
 		if (_instanceo == 0)

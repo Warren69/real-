@@ -3,16 +3,21 @@
 #include"Open.h"
 Lock* Lock::_instancel = 0;
 
-void Lock::handleKeyTurned(Controller *c )
+bool Lock::handleKeyTurned(Controller *c )
 {
+	std::cout << "旋转钥匙\n";
 	if (c->getCandleState())//candle in
 	{
-		//open safe;
+		std::cout << "打开保险箱" << std::endl;
 		c->changeStateTo(Open::Instanceo());
+		return 1;
 	}
 	else {
-		//release killer rabbit;
-		//changeStateTo();
+		std::cout << "放出杀人兔子" << std::endl;
+		std::cout << "摧毁Controller，退出" << std::endl;
+		Controller::destroyController();
+
+		return false;
 	}
 }
 

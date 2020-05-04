@@ -8,16 +8,16 @@ Controller* Controller::Instance()
 	if (_instance == 0)
 		_instance = new Controller;
 
-	std::cout << "Controller单例" << std::endl;
+	//std::cout << "Controller单例" << std::endl;
 	return _instance;
 }
 
 Controller::Controller()
 {
-	{
-		std::cout << "初始化为" << std::endl;
+	
+		std::cout << "初始化为" ;
 		m_state = Wait::Instancew();//初始化
-	}
+
 }
 
 void Controller::printState()

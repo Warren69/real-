@@ -5,7 +5,7 @@
 class Lock:public State {
 public:
 	virtual void printState() {
-		std::cout << "Lock State" << std::endl;
+		std::cout << "ÏÖÔÚ×´Ì¬Îª£ºLock State" << std::endl;
 	}
 	static Lock* Instancel() {
 		if (_instancel == 0)
@@ -14,7 +14,7 @@ public:
 		}
 		return _instancel;
 	};
-	virtual void handleKeyTurned(Controller *c) ;
+	virtual bool handleKeyTurned(Controller *c) ;
 	static void destroy();
 private:
 	static Lock* _instancel;

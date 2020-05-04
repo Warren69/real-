@@ -4,9 +4,7 @@ void State::handleCandleRemoved(Controller* c)
 {
 }
 
-void State::handleKeyTurned(Controller* c)
-{
-}
+
 
 void State::handleSafeClosed(Controller* c)
 {

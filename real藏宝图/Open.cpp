@@ -2,6 +2,10 @@
 #include"Controller.h"
 #include"Wait.h"
 Open* Open::_instanceo = 0;
+bool Open::handleKeyTurned(Controller* c)
+{
+	return true;
+}
 void Open::handleSafeClosed(Controller* c)
 {
 	std::cout << "safe closed\n";

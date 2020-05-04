@@ -22,8 +22,8 @@ public:
 	void handleCandleRemoved() {
 		m_state->handleCandleRemoved(_instance);
 	};
-	void handleKeyTurned() {
-		m_state->handleKeyTurned(_instance);
+	bool handleKeyTurned() {
+		return m_state->handleKeyTurned(_instance);
 	}
 	void handleSafeClosed() {
 		m_state->handleSafeClosed(_instance);
@@ -31,6 +31,6 @@ public:
 	void changeStateTo(State* s) {
 		m_state = s;
 	};
-	void destroyController();
+	static void destroyController();
 };
 #endif
