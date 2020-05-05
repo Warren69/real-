@@ -4,17 +4,14 @@
 #include<iostream>
 class Lock:public State {
 public:
-	virtual void printState() {
-		std::cout << "ÏÖÔÚ×´Ì¬Îª£ºLock State" << std::endl;
-	}
-	static Lock* Instancel() {
-		if (_instancel == 0)
-		{
-			_instancel = new Lock;
-		}
-		return _instancel;
-	};
-	virtual bool handleKeyTurned(Controller *c) ;
+	virtual void handleCandleRemoved(Controller* c) {};
+	virtual void handleSafeClosed(Controller* c) {};
+	virtual bool handleKeyTurned(Controller* c);
+
+
+	virtual void printState();
+	static Lock* Instancel() ;
+	
 	static void destroy();
 private:
 	static Lock* _instancel;

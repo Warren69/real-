@@ -21,6 +21,20 @@ bool Lock::handleKeyTurned(Controller *c )
 	}
 }
 
+void Lock::printState()
+{
+	std::cout << "ÏÖÔÚ×´Ì¬Îª£ºLock State" << std::endl;
+}
+
+Lock* Lock::Instancel()
+{
+	if (_instancel == 0)
+	{
+		_instancel = new Lock;
+	}
+	return _instancel;
+}
+
  void Lock::destroy()
 {
 	delete _instancel;

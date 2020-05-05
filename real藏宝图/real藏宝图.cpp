@@ -48,21 +48,6 @@ int main()
             }
         }
     }
-    /*
-    c->handleCandleRemoved();
-    c->printState();
-   
-    c->setDoorState(doorClosed);
-    c->handleCandleRemoved();
-    c->printState();
 
-    c->setCandleState(candleOut);
-    if(!c->handleKeyTurned())
-        return 0;
-    c->printState();
-    
-    c->handleSafeClosed();
-    c->printState();
-  */
     c->destroyController();
 }

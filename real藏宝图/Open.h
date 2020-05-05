@@ -4,10 +4,13 @@
 #include<iostream>
 class Open:public State {
 public:
-	virtual void printState() {
-		std::cout << "ÏÖÔÚ×´Ì¬Îª£ºOpen State" << std::endl;
-	}
-	bool  handleKeyTurned(Controller* c) ;
+	virtual void handleCandleRemoved(Controller* c) {};
+	virtual void handleSafeClosed(Controller* c);
+	bool  handleKeyTurned(Controller* c);
+
+
+	virtual void printState();
+	
 	//Open();
 	static Open* Instanceo() {
 		if (_instanceo == 0)
@@ -16,7 +19,7 @@ public:
 		}
 		return _instanceo;
 	};
-	virtual void handleSafeClosed(Controller* c);
+	
 
 	static void destroy();
 private:

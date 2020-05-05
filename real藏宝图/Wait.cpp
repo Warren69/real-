@@ -9,6 +9,18 @@ void Wait::handleSafeClosed()
 	std::cout << "错误❌\n";
 }
 
+Wait* Wait::Instancew()
+{
+	if (_instancew == 0)
+		_instancew = new Wait;
+	return _instancew;
+}
+
+void Wait::revealLock()
+{
+	std::cout << "露出锁头\n";
+}
+
 void Wait::handleCandleRemoved(Controller* c)
 {
 	std::cout << "蜡烛移开" << std::endl;
@@ -25,8 +37,18 @@ void Wait::handleCandleRemoved(Controller* c)
 	
 }
 
+void Wait::printState()
+{
+	std::cout << "现在状态为：Wait State" << std::endl;
+}
+
  void Wait::destroyWait()
 {
 	delete _instancew;
 	_instancew = nullptr;
 }
+
+ Wait::Wait()
+ {
+	 std::cout << "Wait" << std::endl;
+ }

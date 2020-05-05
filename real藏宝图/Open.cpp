@@ -6,6 +6,10 @@ bool Open::handleKeyTurned(Controller* c)
 {
 	return true;
 }
+void Open::printState()
+{
+	std::cout << "ÏÖÔÚ×´Ì¬Îª£ºOpen State" << std::endl;
+}
 void Open::handleSafeClosed(Controller* c)
 {
 	std::cout << "safe closed\n";
